@@ -1,0 +1,12 @@
+/* Input border      | `#D6D8DC` |
+| Placeholder text  | `#ADB1BA` |
+| Input text        | `#323C52` |
+| Button background | `#018794` |
+| Button color      | `#FFFFFF` | */
+.tq-primary-btn{
+    background-color: #018794;
+    color: #FFFFFF;
+    padding: 1rem;
+    border: 1px solid #018794;
+    border-radius: 2px;
+}

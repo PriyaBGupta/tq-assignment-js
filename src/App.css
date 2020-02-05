@@ -15,3 +15,8 @@
   margin: 0 auto;
   padding: 24px;
 }
+
+*{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}

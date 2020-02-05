@@ -17,6 +17,7 @@ We provide already a dumb component in `components/Search.js`. Right now it's a 
 - The input and button are `50px` high.
 - The width of the button should adapt to its content.
 - The width of the input should adapt to the remaining space in the form.
+//pending
 
 | Element           | Color     |
 | ----------------- | --------- |
@@ -30,4 +31,5 @@ We provide already a dumb component in `components/Search.js`. Right now it's a 
 
 - The form must be responsive. It must adapt to the width of the container.
 - Imagine we want to reuse the `<input />` and the `<button>` in other places. How would you make those two pieces reusable?
-- Is a spec file needed for this task? If yes, what would you test in the spec? If no, why not?
+- Is a spec file needed for this task? If yes, what would you test in the spec? If no, why not? 
+//pending

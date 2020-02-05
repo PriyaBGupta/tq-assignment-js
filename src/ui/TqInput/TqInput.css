@@ -1,0 +1,17 @@
+/* Input border      | `#D6D8DC` |
+| Placeholder text  | `#ADB1BA` |
+| Input text        | `#323C52` |
+| Button background | `#018794` |
+| Button color      | `#FFFFFF` | */
+
+.tq-input{
+    color: #323C52;
+    border : 1px solid #D6D8DC;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 2px;
+    
+}
+input.tq-input::placeholder {
+    color: #ADB1BA;
+}

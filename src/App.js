@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Search from './components/Search';
+import ProductCard from './components/ProductCard';
 import './App.css';
+import {fetchSearchResults} from './api/search';
 
 function App() {
+  const [productState, setProductState] = useState({
+    products:[]
+  });
+  const makeSearchCall = (query) => {
+    fetchSearchResults(query).then((results) => {
+      console.log(results);
+      setProductState({products: results})
+    },
+    (error)=>{
+
+    })
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -13,7 +27,8 @@ function App() {
         />
       </header>
       <main className="App-main">
-        <Search />
+        <Search searchProduct={(query)=>makeSearchCall(query)}/>
+        <ProductCard products={productState.products}/>
       </main>
     </div>
   );

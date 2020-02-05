@@ -2,18 +2,18 @@ import { fetchSearchResults } from './search';
 
 describe('fetchSearchResults', () => {
   // Replace `xit` for `it` in each test
-  xit('Returns a promise', () => {
+  it('Returns a promise', () => {
     expect(fetchSearchResults()).toBeInstanceOf(Promise);
   });
 
-  xit('Returns an empty response if no query is given', done => {
+  it('Returns an empty response if no query is given', done => {
     return fetchSearchResults().then(results => {
       expect(results).toEqual([]);
       done();
     });
   });
 
-  xit('Returns an empty response if query is ""', done => {
+  it('Returns an empty response if query is ""', done => {
     return fetchSearchResults('').then(results => {
       expect(results).toEqual([]);
       done();
@@ -42,7 +42,7 @@ describe('fetchSearchResults', () => {
     }).toThrow(TypeError);
   });
 
-  xit('Returns an array of products when a query is given', done => {
+  it('Returns an array of products when a query is given', done => {
     const expected = [
       {
         productUrl:
