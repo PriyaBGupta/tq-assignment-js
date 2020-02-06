@@ -9,12 +9,25 @@ class Search extends React.Component {
   }
   handleInput = (event) => {
     this.setState({query: event.target.value});
+    
+  }
+  handleEnter = (event) => {
+    if(event.keyCode === 13){
+      event.preventDefault();
+      this.props.searchProduct(this.state.query);
+    }
   }
   render() {
     return (
       <div>
-       <TqInput placeholder="What are you looking for?" onChange={this.handleInput}></TqInput>
-       <TqButton onClick={()=>this.props.searchProduct(this.state.query)}>Search</TqButton>
+       <TqInput 
+       placeholder="What are you looking for?" 
+       onChange={this.handleInput} 
+       onKeyDown={this.handleEnter}/>
+       <TqButton 
+       onClick={()=>this.props.searchProduct(this.state.query)}>
+         Search
+        </TqButton>
       </div>
     );
   }
